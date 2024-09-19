@@ -15,6 +15,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 #Crear un router
 user_auth_router = APIRouter(tags=["Users Authentification"])
 
+
 # Ruta para iniciar sesión
 @user_auth_router.post("/login")
 async def login(data: LoginData, db: Session = Depends(get_db)):
